@@ -1,1 +1,3 @@
 node_modules
+dist/d3.chart.base.js
+dist/d3.chart.base.min.js
