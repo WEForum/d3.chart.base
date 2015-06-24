@@ -171,8 +171,8 @@
       _determineMode.call(this);
 
       // setup some reasonable defaults
-      chart._width  = _toNumFromPx(_style.call(chart, "width")) || 200;
-      chart._height = _toNumFromPx(_style.call(chart, "height")) || 200;
+      chart._width  = _toNumFromPx(_style.call(chart, "width")) || "200px";
+      chart._height = _toNumFromPx(_style.call(chart, "height")) || "200px";
 
       // make sure container height and width are set.
       _initAttr.call(this, "_width", "width", 200);
@@ -186,12 +186,12 @@
 
         // don't overwrite % widths.
         if (!isNaN(chart._width)) {
-          chart.width(_toNumFromPx(_style.call(chart, "width")) || 200, {
+          chart.width(_toNumFromPx(_style.call(chart, "width")) || "200px", {
             noDraw : true
           });
         }
         if (!isNaN(chart._height)) {
-          chart.height(_toNumFromPx(_style.call(chart, "height")) || 200, {
+          chart.height(_toNumFromPx(_style.call(chart, "height")) || "200px", {
             noDraw: true
           });
         }
